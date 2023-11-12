@@ -9,7 +9,7 @@ export default function StopWatch() {
   const [laps, setLaps] = useState([]);
   const [isRunning, setIsRunning] = useState(false);
 
-  const formatWithLeadingZero = (number) => {
+  const formatWithZero = (number) => {
     if (number < 10) return "0" + number;
     else return number.toString();
   };
@@ -55,13 +55,13 @@ export default function StopWatch() {
 
   const handleLap = () => {
     const lapTime =
-      formatWithLeadingZero(hours) +
+      formatWithZero(hours) +
       ":" +
-      formatWithLeadingZero(minutes) +
+      formatWithZero(minutes) +
       ":" +
-      formatWithLeadingZero(seconds) +
+      formatWithZero(seconds) +
       "." +
-      formatWithLeadingZero(miliSeconds);
+      formatWithZero(miliSeconds);
     setLaps((prevLaps) => [...prevLaps, lapTime]);
   };
 
@@ -77,8 +77,8 @@ export default function StopWatch() {
   return (
     <div className="container">
       <div className="timeDisplay">
-        {formatWithLeadingZero(hours)} : {formatWithLeadingZero(minutes)} :{" "}
-        {formatWithLeadingZero(seconds)} : {formatWithLeadingZero(miliSeconds)}
+        {formatWithZero(hours)} : {formatWithZero(minutes)} :{" "}
+        {formatWithZero(seconds)} : {formatWithZero(miliSeconds)}
       </div>
       <div className="buttons">
         <button
