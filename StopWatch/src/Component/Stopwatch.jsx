@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "./StopWatch.css";
-
+import Lap from "./Lap";
 export default function StopWatch() {
   const [seconds, setSeconds] = useState(0);
   const [minutes, setMinutes] = useState(0);
@@ -99,6 +99,7 @@ export default function StopWatch() {
           Reset
         </button>
       </div>
+      <Lap laps={laps} />
     </div>
   );
 }
