@@ -49,6 +49,7 @@ const Weather = () => {
       Clouds: "./img/cluodly.png",
       Rain: "./img/rainy.png",
       Snow: "./img/snow.png",
+      Mist: "./img/mist.png",
     };
 
     return iconMappings[weatherCondition];
