@@ -51,9 +51,11 @@ const Weather = () => {
       Snow: "./img/snow.png",
       Mist: "./img/mist.png",
       Thunderstorm: "./img/storm.png",
+      Fog: "./img/fog.png",
+      Haze: "./img/haze.png",
     };
 
-    return iconMappings[weatherCondition];
+    return iconMappings[weatherCondition] || "./img/cluodly.png";
   };
 
   return (
